@@ -173,6 +173,9 @@ int quadradoMagico(int **matriz, int n)
     linha = somaLinhas(matriz, n);
     coluna = somaColunas(matriz, n);
     diagonal = somaDiagonais(matriz,n);
+
+    // Liberando memoria
+    free(matriz);
     
     // Resultado
     if (linha == coluna && linha == diagonal)
@@ -183,9 +186,6 @@ int quadradoMagico(int **matriz, int n)
     {
         return -1;
     }
-    
-    // Liberando memoria
-    free(matriz);
 }
 
 int main()
