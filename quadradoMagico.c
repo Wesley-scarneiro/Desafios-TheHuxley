@@ -191,7 +191,7 @@ int quadradoMagico(int **matriz, int n)
     diagonal = somaDiagonais(matriz,n);
 
     // Liberando memoria
-    free(matriz);
+    desalocarMatriz(matriz, n);
     
     // Resultado
     if (linha == coluna && linha == diagonal)
