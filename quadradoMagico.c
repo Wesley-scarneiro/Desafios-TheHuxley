@@ -41,6 +41,22 @@ int** criarMatriz(int n)
 }
 
 /*
+    Funcao para desalocar a matriz.
+*/
+void desalocarMatriz(int **matriz, int n)
+{
+    int i;
+
+    for(i = 0; i < n; ++i)
+    {
+        free(matriz[i]);
+    }
+    
+    free(matriz);
+    matriz = NULL;
+}
+
+/*
     Funcao para receber os elementos da matriz.
 */
 void preencherMatriz(int **matriz, int n)
